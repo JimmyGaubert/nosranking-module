@@ -1,5 +1,5 @@
 const https = require('node:https');
-function fetchNosRankingData(region, server, nick) {
+function fetchRanking(region, server, nick) {
     let path = '/v1/';
     switch (region.toLowerCase()) {
         case 'de':
@@ -36,4 +36,4 @@ function fetchNosRankingData(region, server, nick) {
         req.end();
     });
 }
-module.exports = { fetchNosRankingData };
+module.exports = { fetchRanking };
