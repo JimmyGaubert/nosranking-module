@@ -2,8 +2,8 @@
   "name": "@earlam/nosranking-module",
   "version": "0.0.4",
   "description": "A Node.js module to fetch data from the NosRanking API.",
-  "main": "index.js",
-  "type": "module",
+  "main": "index.cjs.js",
+  "module":"index.mjs.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
