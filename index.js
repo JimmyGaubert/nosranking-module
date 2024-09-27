@@ -13,7 +13,7 @@ function fetchRanking(region, server, nick) {
         case 'int':
             break;
         default:
-            throw new Error('Région non supportée.');
+            throw new Error('Unsupported Region.');
     }
     let queryParams = '';
     if (server) { queryParams += `server=${server}&` }
