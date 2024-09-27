@@ -16,14 +16,20 @@ function fetchRanking(region, server, nick) {
             throw new Error('Région non supportée.');
     }
     let queryParams = '';
-    if (server) { queryParams += `server=${server}&` };
-    if (nick) { queryParams += `nick=${encodeURIComponent(nick)}` };
-    if (queryParams) { path += `?${queryParams}`};
-    const options = { hostname: 'api.nosranking.com', port: 443, path: path, method: 'GET', headers: { 'Content-Type': 'application/json'}};
+    if (server) { queryParams += `server=${server}&` }
+    if (nick) { queryParams += `nick=${encodeURIComponent(nick)}` }
+    if (queryParams) { path += `?${queryParams}` }
+    const options = {
+        hostname: 'api.nosranking.com',
+        port: 443,
+        path: path,
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+    };
     return new Promise((resolve, reject) => {
         const req = https.request(options, (res) => {
             let data = '';
-            res.on('data', (chunk) => {data += chunk});
+            res.on('data', (chunk) => { data += chunk });
             res.on('end', () => {
                 if (res.statusCode >= 200 && res.statusCode < 300) {
                     resolve(JSON.parse(data));
@@ -32,7 +38,7 @@ function fetchRanking(region, server, nick) {
                 }
             });
         });
-        req.on('error', (e) => {reject(e)});
+        req.on('error', (e) => { reject(e) });
         req.end();
     });
 }
