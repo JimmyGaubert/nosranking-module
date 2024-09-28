@@ -2,6 +2,7 @@
   "name": "@earlam/nosranking-module",
   "version": "0.0.7",
   "description": "A Node.js module to fetch data from the NosRanking API.",
+  "type": "module",
   "main": "index.cjs",
   "module":"index.mjs",
   "scripts": {
