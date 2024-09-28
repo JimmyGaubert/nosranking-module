@@ -1,4 +1,4 @@
-const https = require('node:https');
+import https from 'node:https';
 export function fetchRanking(region, server, nick) {
     let path = '/v1/';
     switch (region.toLowerCase()) {
