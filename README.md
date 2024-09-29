@@ -1,5 +1,7 @@
 # @earlam/nosranking-module
 
+![NPM Downloads](https://img.shields.io/npm/d18m/%40earlam%2Fnosranking-module) ![NPM Version](https://img.shields.io/npm/v/%40earlam%2Fnosranking-module)
+
 ![NosRanking Logo](https://www.aht.li/3769246/nr-192.png)
 
 A Node.js module to fetch data from the NosRanking API.
